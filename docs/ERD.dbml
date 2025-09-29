@@ -1,0 +1,49 @@
+Table Paint_Color {
+  id int [pk, increment]
+  name varchar
+  hex_code varchar
+  price decimal(10, 2)
+  description text
+}
+
+Table Interior_Seat_Material {
+  id int [pk, increment]
+  name varchar
+  price decimal(10, 2)
+  description text
+}
+
+Table Dashboard_Technology {
+  id int [pk, increment]
+  name varchar
+  features text
+  price decimal(10, 2)
+  description text
+}
+
+Table Wheel_Type {
+  id int [pk, increment]
+  name varchar
+  price decimal(10, 2)
+  description text
+}
+
+Table Customer {
+  id int [pk, increment]
+  first_name varchar
+  last_name varchar
+  email varchar [unique]
+  phone_number varchar
+}
+
+Table Order {
+  id int [pk, increment]
+  customer_id int [ref: > Customer.id]
+  wheel_type_id int [ref: > Wheel_Type.id]
+  paint_color_id int [ref: > Paint_Color.id]
+  interior_seat_material_id int [ref: > Interior_Seat_Material.id]
+  dashboard_technology_id int [ref: > Dashboard_Technology.id]
+  order_date datetime
+  status varchar
+  total_price decimal(10, 2)
+}
