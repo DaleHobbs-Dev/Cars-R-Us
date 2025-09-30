@@ -32,7 +32,6 @@ Table Customer {
   first_name varchar
   last_name varchar
   email varchar [unique]
-  phone_number varchar
 }
 
 Table Order {
