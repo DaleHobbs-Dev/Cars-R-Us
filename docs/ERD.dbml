@@ -1,7 +1,7 @@
 Table Paint_Color {
   id int [pk, increment]
   name varchar
-  hex_code varchar
+  hex varchar(7)
   price decimal(10, 2)
   description text
 }
@@ -18,7 +18,6 @@ Table Dashboard_Technology {
   name varchar
   features text
   price decimal(10, 2)
-  description text
 }
 
 Table Wheel_Type {
