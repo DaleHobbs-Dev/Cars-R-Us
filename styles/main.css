@@ -1,209 +1,143 @@
-/* Container for Paints, Wheels, Interior, Technologies */
-.car-option {
-  background-color: #fdfde7;
-  border: 1px solid #ddd;
+/* ===== Global ===== */
+body {
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  background: #1c1c1c;
+  color: #f4f4f4;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #ffcc00; /* yellow highlight, like dashboard lights */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ===== Option Sections ===== */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.options {
+  background: #2b2b2b;
+  border: 2px solid #444;
   border-radius: 10px;
   padding: 1rem;
-  margin: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
+  box-shadow: inset 0 0 10px #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.car-option:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+.options:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-.car-option h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
-
-.car-option__title {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #2a2a2a;
-  text-align: left;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.3rem;
-}
-
-.car-option__description {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.car-option select {
+/* ===== Select Dropdowns ===== */
+.options select {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
+  background: #111;
+  color: #f4f4f4;
+  border: 2px solid #555;
   border-radius: 6px;
-  border: 1px solid #aaa;
   font-size: 1rem;
-  background-color: #fff;
+  appearance: none;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
-.car-option select:focus {
-  border-color: #0066cc;
-  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+.options select:focus {
+  border-color: #ffcc00;
+  background: #222;
   outline: none;
 }
 
-.car-option select:hover {
-  border-color: #888;
-} /* Section wrapper */
-.custom-orders {
-  margin-top: 2rem;
+/* ===== Order Summary ===== */
+.order {
+  background: #262626;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
 }
 
-/* Section heading */
-.custom-orders h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #444;
-  padding-bottom: 0.3rem;
-}
-
-/* Individual order cards */
-.custom-order {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+.order__summary {
+  background: #1a1a1a;
   padding: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.custom-order:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-/* Section wrapper */
-.custom-orders {
-  margin-top: 2rem;
-}
-
-/* Section heading */
-.custom-orders h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #444;
-  padding-bottom: 0.3rem;
-}
-
-/* Individual order cards */
-.custom-order {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 8px;
-  padding: 1rem;
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 50px;
 }
 
-.custom-order:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-.custom-order:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-.car-option select option {
+.order__message {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 1rem;
   padding: 0.5rem;
-  font-size: 1rem;
+  border-left: 4px solid #ffcc00;
+  background: #333;
+  border-radius: 6px;
 }
 
-.car-option select option:hover {
-  background-color: #f0f0f0;
-}
-
-.car-option select option:focus {
-  background-color: #e0e0e0;
-  outline: none;
-}
-
-.car-option select option[selected] {
-  font-weight: bold;
-  background-color: #d0d0d0;
-}
-
-.place-order-btn {
+/* ===== Order Button ===== */
+.order__button button {
   display: inline-block;
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  width: 100%;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
   color: #fff;
-  padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
   font-weight: bold;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 1rem;
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.place-order-btn:hover {
-  background: linear-gradient(135deg, #0096c7, #48cae4);
+.order__button button:hover {
+  background: linear-gradient(135deg, #ff3333, #ff0000);
   transform: scale(1.05);
 }
 
-.place-order-btn:active {
+.order__button button:active {
   transform: scale(0.97);
 }
-.place-order-btn:focus {
-  outline: none;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
-}
-/* Section wrapper */
-.custom-orders {
-  margin-top: 2rem;
+
+/* ===== Custom Orders Section ===== */
+.customOrders {
+  background: #202020;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
 }
 
-/* Section heading */
-.custom-orders h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #444;
-  padding-bottom: 0.3rem;
+.customOrder__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-/* Individual order cards */
-.custom-order {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+.customOrder__summary div {
+  background: #2e2e2e;
+  border: 1px solid #444;
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.8rem;
+  box-shadow: inset 0 0 6px #111;
+  transition: background 0.2s ease;
 }
 
-.custom-order:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+.customOrder__summary div:hover {
+  background: #383838;
 }
-.custom-order strong {
-  color: #222;
-}
-.custom-order span {
-  color: #555;
+.customOrder__summary strong {
+  color: #ffcc00;
 }

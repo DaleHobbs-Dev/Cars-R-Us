@@ -112,8 +112,7 @@
             "id": 999,
             "firstName": "Jane",
             "lastName": "Doe",
-            "email": "jane@example.com",
-            "phone": "555-1234"
+            "email": "jane@example.com"
         }
     ],
     "orders": [
