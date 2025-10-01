@@ -1,0 +1,27 @@
+{
+  "name": "cars-r-us",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "json-server -p 8088 -w api/database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaleHobbs-Dev/Cars-R-Us.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaleHobbs-Dev/Cars-R-Us/issues"
+  },
+  "homepage": "https://github.com/DaleHobbs-Dev/Cars-R-Us#readme",
+  "description": "",
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}
